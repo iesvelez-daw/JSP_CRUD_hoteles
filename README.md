@@ -22,7 +22,7 @@
 > sudo su  # (Introducidos nuestra contraseña, para obtener acceso como root)
 > 
 > # Cambiamos el plugin de autenticación de auth_socket a mysql_native_password. 
-> # Es necesario para que la aplicación conecta correctamente al servidor MySQL.
+> # Es necesario para que la aplicación conecte correctamente al servidor MySQL.
 > echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY ''" | mysql -u root
 >
 > echo "drop database if exists reservaHoteles; create database reservaHoteles" | mysql -u root
