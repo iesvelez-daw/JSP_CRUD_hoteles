@@ -1,4 +1,4 @@
-> # https://github.com/viktoriiaStasiuk/CRUD_JSP
+> # :copyright: https://github.com/viktoriiaStasiuk/CRUD_JSP
 > **Proyecto bifurcado**
 >
 > ## MYSQL
