@@ -1,3 +1,46 @@
+> # https://github.com/viktoriiaStasiuk/CRUD_JSP
+> **Proyecto bifurcado**
+>
+> ## MYSQL
+> - Usuario: root
+> - Contraseña: (sin contraseña)
+> - Base de datos: **reservaHoteles**
+>
+> ## DESPLIEGUE EN UBUNTU 
+>
+> ### Instalación de software
+> ```console
+> sudo  apt  install  git  mysql-client  mysql-server  tomcat8  tomcat8-admin 
+> ``` 
+> ### Descarga de código fuente
+> ```console
+> git  clone  https://github.com/iesvelez-daw/JSP_CRUD_hoteles.git  &&  cd  JSP_CRUD_hoteles
+> ```
+>
+> ### Introducción de datos
+> ```console
+> sudo su  # (Introducidos nuestra contraseña, para obtener acceso como root)
+> 
+> # Cambiamos el plugin de autenticación de auth_socket a mysql_native_password. 
+> # Es necesario para que la aplicación conecta correctamente al servidor MySQL.
+> echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY ''" | mysql -u root
+>
+> echo "drop database if exists reservaHoteles; create database reservaHoteles" | mysql -u root
+> cat reservahoteles.sql | mysql -u root -D reservaHoteles
+> ```
+> ### Despliegue en Tomcat 8
+> ```console
+> sudo su  # (Introducidos nuestra contraseña, para obtener acceso como root)
+> 
+> cp  mysql-connector-java-5.1.21.jar  /var/lib/tomcat8/lib
+> cp  -r  ReservaHoteles  /var/lib/tomcat8/webapps/hoteles
+> ```
+>
+> ### Ejecutar aplicación
+>
+> Abrimos en el navegador la URL http://localhost:8080/hoteles
+>
+
 # CRUD Reserva de hoteles
 Trabajo compartido entre las asignaturas de programación y base de datos donde se realizará un CRUD (create, read, update and delete) en JSP y MySql
 ## Descripción
