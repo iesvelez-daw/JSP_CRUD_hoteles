@@ -35,6 +35,11 @@
 > cp  mysql-connector-java-5.1.21.jar  /var/lib/tomcat8/lib
 > cp  -r  ReservaHoteles  /var/lib/tomcat8/webapps/hoteles
 > ```
+> **NOTA:** Deberás reiniciar Tomcat para que los archivos de `/var/lib/tomcat8/lib` se carguen.
+>
+> ```bash
+> sudo  systemctl  restart  tomcat8
+> ```
 >
 > ### Ejecutar aplicación
 >
